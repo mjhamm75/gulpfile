@@ -12,8 +12,8 @@ define(function(require) {
     },
 
     list: function() {
-      $('#app').html('<div>Hello World</div>');
-      new TestView();
+      var testView = new TestView();
+      $('#app').html(testView.render().el);
     }
   });
 

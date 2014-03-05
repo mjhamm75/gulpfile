@@ -7,9 +7,9 @@ define(function(require) {
   var TestView = Backbone.View.extend({
     template: testTemplate,
 
-    initialize: function() {
-      // debugger;
-      console.log("Test View");
+    render: function() {
+      this.$el.html(this.template());
+      return this;
     }
   });
   return TestView;
