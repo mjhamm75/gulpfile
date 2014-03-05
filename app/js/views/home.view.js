@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone');
-  var testTemplate = require('hbs!app.templates/test');
+  var testTemplate = require('hbs!app.templates/home');
 
   var TestView = Backbone.View.extend({
     template: testTemplate,
