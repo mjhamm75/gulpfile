@@ -8,7 +8,7 @@ define(function(require) {
     template: testTemplate,
 
     render: function() {
-      this.$el.html(this.template());
+      this.setElement(this.template());
       return this;
     }
   });
