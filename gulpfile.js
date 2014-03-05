@@ -14,7 +14,7 @@ var paths = {
   dev: {
     html: ['./app/index.html'],
     js: './app/js/**/*.js',
-    less: './app/less/*.less',
+    less: ['./app/less/*.less', './app/js/libs/bootstrap/dist/css/bootstrap.css'],
     templates: './app/templates/*.hbs'
   }
 };
