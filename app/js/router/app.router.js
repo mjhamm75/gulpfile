@@ -4,12 +4,19 @@ define(function(require) {
   'use strict';
 
   var Backbone = require('backbone');
+  var BlogView = require('views/blog.view');
+  var HomeView = require('views/home.view');
   var NavView = require('views/navbar.view');
-  var TestView = require('views/test.view');
 
   var Router = Backbone.Router.extend({
     routes: {
-      "": "list"
+      "": "home",
+      "blog": "blog"
+    },
+
+    blog: function() {
+      var blogView = new BlogView();
+      this.swapView(blogView);
     },
 
     destroyView: function(view) {
@@ -21,11 +28,11 @@ define(function(require) {
       }
     },
 
-    list: function() {
+    home: function() {
       var navView = new NavView();
       $('#nav').html(navView.render().el);
-      var testView = new TestView();
-      $('#app').html(testView.render().el);
+      var homeView = new HomeView();
+      $('#app').html(homeView.render().el);
     },
 
     swapView: function(view) {
