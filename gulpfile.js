@@ -59,5 +59,14 @@ gulp.task('templates', function() {
     .pipe(gulp.dest(paths.build.templates));
 });
 
+gulp.task('watch', function() {
+  'use strict';
+  gulp.watch(paths.dev.js, ['js']);
+  gulp.watch(paths.dev.less, ['less']);
+  gulp.watch(paths.dev.html, ['html']);
+  gulp.watch(paths.dev.templates, ['templates']);
+  gulp.run('default');
+});
+
 
 gulp.task('default', ['html', 'js', 'less', 'templates', 'connect']);
